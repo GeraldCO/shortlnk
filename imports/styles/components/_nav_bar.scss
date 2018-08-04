@@ -1,0 +1,17 @@
+.nav_bar{
+    color: $header-color;
+    background: $header-bg;
+}
+
+.nav_bar__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: $size-max-width;
+    margin: 0 auto;
+    padding: $space;
+}
+
+.nav_bar__title{
+    margin: 0;
+}

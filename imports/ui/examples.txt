@@ -1,0 +1,43 @@
+decrement(){
+    this.setState((prevState) => {
+      return { count: prevState.count - 1 };
+    });
+  };
+
+  increment (){
+    this.setState((prevState) => {
+      return { count: prevState.count + 1}
+    });
+  }
+
+  render(){
+    return <div>
+      <h3>  Join Short Lnk </h3>
+
+      <p>{this.state.count}</p>
+      <button onClick={this.decrement.bind(this)}> -1 </button>
+      <button onClick={this.increment.bind(this)}> +1 </button>
+
+const employeeSchema = new SimpleSchema({
+    name: {
+      type: String,
+      min: 1,
+      max: 200
+    },
+    hourlyWage:{
+      type: Number,
+      min:1
+    },
+    email:{
+      type: String,
+      regEx: SimpleSchema.RegEx.Email,
+    }
+  });
+
+  employeeSchema.validate({
+    name: 'ricardo', 
+    hourlyWage: 5,
+    email: 'geraldcerd@gmail.com'
+  });
+
+  require ('meteor/session').Session.set('showVisible', false)
